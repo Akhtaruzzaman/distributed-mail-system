@@ -1,0 +1,6 @@
+@PosApp_HostAddress = http://localhost:5272
+
+GET {{PosApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

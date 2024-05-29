@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DistributedSystem.ServiceDefaults\DistributedSystem.ServiceDefaults.csproj" />
     <ProjectReference Include="..\EmailMessage\CommonServices.csproj" />
   </ItemGroup>
 

@@ -1,7 +1,6 @@
-using AccountsApp.Services;
-using AccountsApp.Services.IServices;
 using CommonServices;
-using Microsoft.Extensions.Configuration;
+using PosApp.Services;
+using PosApp.Services.IServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +18,7 @@ builder.Logging.SetMinimumLevel(LogLevel.Information); // Set the minimum loggin
 builder.Services.Configure<RabbitMQSettings>(builder.Configuration.GetSection("RabbitMQ"));
 builder.Services.AddSingleton<IEmailRequestService, EmailRequestService>();
 builder.Services.AddHostedService<NotificationReceiver>();
+
 var app = builder.Build();
 
 app.MapDefaultEndpoints();
