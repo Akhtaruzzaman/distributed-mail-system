@@ -5,7 +5,7 @@ using PosApp.Services.IServices;
 namespace PosApp.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class EmailController : ControllerBase
     {
         private readonly ILogger<EmailController> _logger;

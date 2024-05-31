@@ -1,4 +1,5 @@
 using CommonServices;
+using PosApp.Configurations;
 using PosApp.Services;
 using PosApp.Services.IServices;
 
@@ -8,7 +9,9 @@ builder.AddServiceDefaults();
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(options => {
+    options.Conventions.Add(new RoutePrefixConvention("api/pos"));
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

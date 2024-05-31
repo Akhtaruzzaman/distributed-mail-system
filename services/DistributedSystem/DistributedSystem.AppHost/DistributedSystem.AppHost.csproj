@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AccountsApp\AccountsApp.csproj" />
+    <ProjectReference Include="..\ApiGateway\ApiGateway.csproj" />
     <ProjectReference Include="..\EmailSenderApp\EmailSenderApp.csproj" />
     <ProjectReference Include="..\PosApp\PosApp.csproj" />
   </ItemGroup>

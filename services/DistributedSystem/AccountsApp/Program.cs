@@ -1,3 +1,4 @@
+using AccountsApp.Configurations;
 using AccountsApp.Services;
 using AccountsApp.Services.IServices;
 using CommonServices;
@@ -9,7 +10,9 @@ builder.AddServiceDefaults();
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(options => {
+    options.Conventions.Add(new RoutePrefixConvention("api/accounts"));
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
