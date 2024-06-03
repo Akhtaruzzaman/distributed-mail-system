@@ -21,6 +21,15 @@ builder.Logging.SetMinimumLevel(LogLevel.Information); // Set the minimum loggin
 builder.Services.Configure<RabbitMQSettings>(builder.Configuration.GetSection("RabbitMQ"));
 builder.Services.AddSingleton<IEmailSenderService, EmailSenderService>();
 builder.Services.AddHostedService<MailReceiver>();
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins("http://localhost:9085");
+                      });
+});
 var app = builder.Build();
 
 app.MapDefaultEndpoints();
@@ -33,6 +42,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(MyAllowSpecificOrigins);
 
 app.UseAuthorization();
 

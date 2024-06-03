@@ -1,0 +1,22 @@
+http:
+  routers:
+    ocelot:
+      rule: "PathPrefix(`/api`)"
+      service: ocelot
+      entryPoints:
+        - web
+    react:
+      rule: "PathPrefix(`/`)"
+      service: react
+      entryPoints:
+        - web
+
+  services:
+    ocelot:
+      loadBalancer:
+        servers:
+          - url: "https://localhost:9081"
+    react:
+      loadBalancer:
+        servers:
+          - url: "http://localhost:9085"

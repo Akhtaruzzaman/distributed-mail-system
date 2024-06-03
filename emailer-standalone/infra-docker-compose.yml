@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  frontend-gateway:
+    image: traefik:v2.8
+    command:
+      - "--api.debug=true"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--entrypoints.web.address=:80"
+      - "--providers.file.directory=/etc/traefik/conf"
+      - "--providers.file.watch=true"
+    ports:
+      - "8020:80"
+      - "7080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./traefik/dynamic.yml:/etc/traefik/conf/traefik.yml:ro
+    networks:
+      - traefik-net
+
+networks:
+  traefik-net:
+    driver: bridge
