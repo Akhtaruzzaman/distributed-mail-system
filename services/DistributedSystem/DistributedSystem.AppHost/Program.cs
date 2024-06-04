@@ -9,6 +9,7 @@ var emailsenderapp = builder.AddProject<Projects.EmailSenderApp>("emailsenderapp
 
 builder.AddNpmApp("react", "../../../frontend")
     .WithEnvironment("BROWSER", "none") // Disable opening browser on npm start
+    //.WithHttpEndpoint(env: "PORT")
     .WithExternalHttpEndpoints()
     .PublishAsDockerFile();
 
