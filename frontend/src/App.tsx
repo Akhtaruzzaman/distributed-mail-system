@@ -7,7 +7,7 @@ export function App() {
 	if (data.weathers.length > 0) {
 		return (
 			<div className="App">
-				<h3>⚡⚛️ Vite React Best Practices Template (by Codely)</h3>
+				<h3>⚡⚛️ Vite React Weather</h3>
 				<h2>Weather forecast</h2>
 				<table>
 					<tr>

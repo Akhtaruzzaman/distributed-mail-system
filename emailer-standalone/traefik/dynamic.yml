@@ -15,7 +15,7 @@ http:
     ocelot:
       loadBalancer:
         servers:
-          - url: "http://localhost:5180"
+          - url: "http://192.168.0.10:5180"
     react:
       loadBalancer:
         servers:
