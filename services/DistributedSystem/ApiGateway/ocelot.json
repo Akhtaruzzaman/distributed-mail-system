@@ -35,6 +35,18 @@
       ],
       "UpstreamPathTemplate": "/api/pos/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/websocket/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 9085
+        }
+      ],
+      "UpstreamPathTemplate": "/api/websocket/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "UPGRADE" ]
     }
   ],
   "GlobalConfiguration": {

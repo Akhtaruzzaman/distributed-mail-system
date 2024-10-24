@@ -19,6 +19,7 @@
     <ProjectReference Include="..\ApiGateway\ApiGateway.csproj" />
     <ProjectReference Include="..\EmailSenderApp\EmailSenderApp.csproj" />
     <ProjectReference Include="..\PosApp\PosApp.csproj" />
+    <ProjectReference Include="..\SignalApi\SignalRApi.csproj" />
   </ItemGroup>
 
 </Project>

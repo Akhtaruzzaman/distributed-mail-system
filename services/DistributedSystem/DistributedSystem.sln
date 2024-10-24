@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributedSystem.ServiceDe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{8A3C4AFA-AC00-44B2-835A-E092486BFC5C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRApi", "SignalApi\SignalRApi.csproj", "{9054A55B-DA1F-478B-BFCF-41515AAA6AAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{8A3C4AFA-AC00-44B2-835A-E092486BFC5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A3C4AFA-AC00-44B2-835A-E092486BFC5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A3C4AFA-AC00-44B2-835A-E092486BFC5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9054A55B-DA1F-478B-BFCF-41515AAA6AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9054A55B-DA1F-478B-BFCF-41515AAA6AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9054A55B-DA1F-478B-BFCF-41515AAA6AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9054A55B-DA1F-478B-BFCF-41515AAA6AAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{13136B0A-2443-424D-BC5B-1E5024B5BCB6} = {FA91A2DC-814E-4CDE-B0F9-6D170FE0910B}
 		{EF4C8C5F-B995-4FF7-8B5A-ADA03F8B4134} = {FA91A2DC-814E-4CDE-B0F9-6D170FE0910B}
 		{8A3C4AFA-AC00-44B2-835A-E092486BFC5C} = {FA91A2DC-814E-4CDE-B0F9-6D170FE0910B}
+		{9054A55B-DA1F-478B-BFCF-41515AAA6AAE} = {FA91A2DC-814E-4CDE-B0F9-6D170FE0910B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D252528A-0AFE-44B2-91F3-F642D37A82B5}
